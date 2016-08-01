@@ -1,0 +1,21 @@
+<div class="suppliers-list-container">
+    <div class="head">
+        <div class="row">
+            <div class="col-sm-6">
+                Supplier
+            </div>  
+            <div class="col-sm-2">
+                Pound Rating
+            </div>  
+            <div class="col-sm-2">
+                Reference
+            </div>
+            <div class="col-sm-2">
+                Value
+            </div>
+        </div> 
+    </div>
+    <div class="body">
+        <suppliers-list-item ng-repeat="supplier in $ctrl.payments" supplier-data="supplier"></suppliers-list-item>    
+    </div>
+</div>

@@ -1,0 +1,9 @@
+
+<form name="supplierFilterForm">
+    <input type="text" ng-model="$ctrl.filters.query">
+    <select ng-options="item for item in $ctrl.ratings" ng-model="$ctrl.filters.rating">
+        <option value=""> Select pound rating </option>
+    </select>
+    <button type="reset" class="btn btn-default" ng-click="$ctrl.onReset()"> Reset </button>
+    <button type="submit" class="btn btn-primary" ng-click="$ctrl.onSearch()"> Search </button>
+</form>

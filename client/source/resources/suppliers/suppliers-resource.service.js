@@ -1,17 +1,28 @@
 
 class SuppliersResource {
-    constructor($q, $resource) {
-        this.$q = $q
+    constructor($resource) {
         this.$resource = new $resource(
-            'url', null
+            'http://test-api.kuria.tshdev.io/', null
         ) 
     }
-
     getSuppliers(filters = {}) {
-        return this.$q.resolve([])
+        console.log(filters)
+        return this.$resource.get(filters).$promise.then((data) => {
+            // ?! An error occured in body when status is 200?!
+            // unnecessary code if api would be better
+            if(data.payments && data.pagination) {   
+                return {data: data}
+            } 
+            return {
+                data: {
+                    payments: [],
+                    pagination: null
+                } 
+            } 
+        })
     }
 }
 
-SuppliersResource.$inject = ['$q', '$resource']
+SuppliersResource.$inject = ['$resource']
 
 export default SuppliersResource

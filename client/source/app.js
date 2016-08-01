@@ -15,6 +15,7 @@ const root = angular.module('app', [
     Resources
 ])
 .component('app', AppComponent)
+.value('EventEmmiter', payload => ({ $event: payload }))
 .constant('CONFIG', CONFIG)
 .config(($locationProvider, $urlRouterProvider) => {
     

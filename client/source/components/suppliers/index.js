@@ -1,16 +1,21 @@
 import angular from 'angular'
 import SuppliersComponent from './suppliers.component'
-import SuppliersService from './suppliers.service'
+import SuppliersFilterForm from './suppliers-filter-form'
+import SuppliersListContainer from './suppliers-list-container'
+import SuppliersPagination from './suppliers-pagination'
 
-const suppliers = angular.module('app.components.suppliers', [])
+const suppliers = angular.module('app.components.suppliers', [
+    SuppliersFilterForm,
+    SuppliersListContainer,
+    SuppliersPagination
+])
 .component('suppliers', SuppliersComponent)
-.service('SuppliersService', SuppliersService)
 .config(($stateProvider) => {
     $stateProvider.state('suppliers', {
         url: '/suppliers',
-        template: '<suppliers></suppliers>',
+        template: '<suppliers suppliers-data="$resolve.suppliersData"></suppliers>',
         resolve: {
-            suppliersData: SuppliersService => SuppliersService.getSuppliers()
+            suppliersData: SuppliersResource => SuppliersResource.getSuppliers().then(data => data.data)
         }
     })
 })
