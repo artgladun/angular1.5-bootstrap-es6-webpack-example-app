@@ -12,7 +12,7 @@ class SuppliersController {
         this.originFilters = Object.assign({}, this.filters)
     }
     refreshSupplierData({ filters }) {
-        this.filters = Object.assign(this.filters, filters)
+        this.filters = Object.assign({}, filters)
         this.updateData()
     }
     resetFilters() {

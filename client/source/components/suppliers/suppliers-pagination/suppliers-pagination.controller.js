@@ -1,22 +1,24 @@
 
 class SuppliersPaginationControllers {
-    constructor(EventEmmiter) {
+    constructor(CONFIG, EventEmmiter) {
+        this.CONFIG = CONFIG
         this.EventEmmiter = EventEmmiter
     }
     $onChanges(changes) {
         if(changes.paginationData) {
-            this.pagination = Object.assign({}, this.paginationData)
+            this.pagination = this.paginationData ? Object.assign({}, this.paginationData) : null
         }
         if(changes.filtersData) {
-            this.filters = {page: this.filtersData.page}       
+            this.activePage = this.filtersData.page
+            this.filters = Object.assign({}, this.filtersData) 
         }
     }
     onChangePage(page) {
-        this.filters.page = page        
+        this.filters.page = this.activePage        
         this.onFilterChange(this.EventEmmiter({ filters: this.filters }))
     }
 }
 
-SuppliersPaginationControllers.$inject = ['EventEmmiter']
+SuppliersPaginationControllers.$inject = ['CONFIG', 'EventEmmiter']
 
 export default SuppliersPaginationControllers

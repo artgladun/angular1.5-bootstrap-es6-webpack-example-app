@@ -6,10 +6,7 @@ class SuppliersFilterFormControllers {
     }
     $onChanges(changes) {
         if(changes.filtersData) {
-            this.filters = {
-                query: this.filtersData.query, 
-                rating: this.filtersData.rating
-            }    
+            this.filters = Object.assign({}, this.filtersData)
         }
     }
     onSearch() {
