@@ -1,4 +1,4 @@
-<div class="suppliers-list-container">
+<div class="suppliers-list-container" ng-if="$ctrl.payments.length">
     <div class="head">
         <div class="row">
             <div class="col-sm-6">
@@ -20,6 +20,6 @@
     </div>
 </div>
 
-<div class="suppliers-list-container">
+<div class="suppliers-list-container" ng-if="!$ctrl.payments.length">
     <p> No results </p>    
 </div>

@@ -3,7 +3,7 @@ class SuppliersListContainerController {
     constructor() {}
     $onChanges(changes) {
         if(changes.paymentsData) {
-            this.payments = Object.assign({}, this.paymentsData)
+            this.payments = this.paymentsData.slice()
         }
     }
 }

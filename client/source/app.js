@@ -17,8 +17,9 @@ const root = angular.module('app', [
 .component('app', AppComponent)
 .value('EventEmmiter', payload => ({ $event: payload }))
 .constant('CONFIG', CONFIG)
-.config(($locationProvider, $urlRouterProvider) => {
+.config(($compileProvider, $locationProvider, $urlRouterProvider) => {
     
+    $compileProvider.debugInfoEnabled(false)
     $locationProvider.html5Mode(true)    
     $urlRouterProvider.otherwise('/suppliers')
 })
