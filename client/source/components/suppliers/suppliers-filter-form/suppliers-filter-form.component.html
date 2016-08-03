@@ -1,9 +1,19 @@
 
-<form name="supplierFilterForm">
-    <input type="text" ng-model="$ctrl.filters.query">
-    <select ng-options="item for item in $ctrl.ratings" ng-model="$ctrl.filters.rating">
-        <option value=""> Select pound rating </option>
-    </select>
-    <button type="reset" class="btn btn-default" ng-click="$ctrl.onReset()"> Reset </button>
-    <button type="submit" class="btn btn-primary" ng-click="$ctrl.onSearch()"> Search </button>
+<form class="suppliers-filter-form" name="supplierFilterForm">
+    <div class="row">
+        <div class="col-lg-5 col-md-4 col-sm-6 col">
+            <input class="form-control" placeholder="Search suppliers" type="text" ng-model="$ctrl.filters.query">
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col">
+            <select class="form-control" ng-options="item for item in $ctrl.ratings" ng-model="$ctrl.filters.rating">
+                <option value=""> Select pound rating </option>
+            </select>
+        </div>
+        <div class="col-md-2 col-sm-3 col-sm-offset-3 col-md-offset-0 col">
+            <button type="reset" class="btn btn-block btn-default" ng-click="$ctrl.onReset()"> Reset </button>
+        </div>
+        <div class="col-md-2 col-sm-3 col">
+            <button type="submit" class="btn btn-block btn-primary" ng-click="$ctrl.onSearch()"> Search </button>
+        </div>
+    </div>
 </form>

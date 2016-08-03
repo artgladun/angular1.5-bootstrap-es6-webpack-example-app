@@ -1,9 +1,11 @@
-<ul ng-if="$ctrl.pagination" uib-pagination 
-        total-items="$ctrl.pagination.total * $ctrl.CONFIG.suppliersItemsPerPage" 
-        previous-text="<"
-        next-text=">"
-        items-per-page="{{$ctrl.CONFIG.suppliersItemsPerPage}}"
-        max-size="$ctrl.CONFIG.limitOfPaginationSize"
-        ng-model="$ctrl.activePage" 
-        ng-change="$ctrl.onChangePage()">
-</ul>
+<div class="suppliers-pagination-container">
+        <ul ng-if="$ctrl.pagination" uib-pagination 
+                total-items="$ctrl.pagination.total * $ctrl.CONFIG.suppliersItemsPerPage" 
+                previous-text="<"
+                next-text=">"
+                items-per-page="{{$ctrl.CONFIG.suppliersItemsPerPage}}"
+                max-size="$ctrl.CONFIG.limitOfPaginationSize"
+                ng-model="$ctrl.activePage" 
+                ng-change="$ctrl.onChangePage()">
+        </ul>
+</div>

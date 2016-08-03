@@ -1,0 +1,15 @@
+.suppliers-filter-form {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+
+    .col {
+        padding: 5px;
+
+        @media screen and (min-width: $screen-md) {
+            padding-bottom: 0;
+            padding-top: 0;            
+        }
+    }
+}

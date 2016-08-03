@@ -1,0 +1,23 @@
+.suppliers-pagination-container {
+    text-align: center;
+
+    ul {
+        margin: 10px 0;
+    }
+
+    li > a {
+        @extend .btn;
+        background-color: transparent !important;
+        border: 1px solid $dark-gray !important;
+        color: $text-color !important;
+        font-weight: bold;
+        margin: 0 3px;
+        padding: 3px 8px;        
+    }
+
+    li.active > a, li > a:hover {
+        background-color: $darker-gray !important;
+        border: 1px solid $darker-gray !important;
+        color: $white !important;;
+    }
+}

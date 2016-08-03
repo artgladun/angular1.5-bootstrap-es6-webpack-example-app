@@ -11,7 +11,13 @@ $icon-font-path: "../../../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
 // //
 // //## Gray and brand colors for use across Bootstrap.
 
-$white:                    #fff;
+$white:                     #fdfdfd;
+$blue:                      #2288b7;
+
+$light-gray:                #d2d1d1;             
+$lighter-gray:              #d5d4d4;
+$dark-gray:                 #959595;
+$darker-gray:               #646464;
 
 // $gray-base:              #000 !default;
 // $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
@@ -20,7 +26,7 @@ $white:                    #fff;
 // $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 // $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-// $brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+$brand-primary:             $blue;
 // $brand-success:         #5cb85c !default;
 // $brand-info:            #5bc0de !default;
 // $brand-warning:         #f0ad4e !default;
@@ -32,9 +38,9 @@ $white:                    #fff;
 // //## Settings for some of the most global styles.
 
 // //** Background color for `<body>`.
-$body-bg:               rgb(221, 220, 220) !default;
+$body-bg:               #dfdede;
 // //** Global text color on `<body>`.
-// $text-color:            $gray-dark !default;
+$text-color:            #555555;
 
 // //** Global textual link color.
 // $link-color:            $brand-primary !default;
@@ -47,21 +53,32 @@ $body-bg:               rgb(221, 220, 220) !default;
 // //== Typography
 // //
 // //## Font, line-height, and color for body text, headings, and more.
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url('../fonts/SourceSansPro-Light.otf');
+    font-weight: 300;
+}
 
-// $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url('../fonts/SourceSansPro-Regular.otf');
+    font-weight: 400;
+}
+
+$font-family-sans-serif:  Helvetica, Arial, sans-serif !default;
 // $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 // //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 // $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
-// $font-family-base:        $font-family-sans-serif !default;
+$font-family-base:        $font-family-sans-serif;  
 
 $font-size-base:          14px !default;
 // $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 // $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
-$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h1:            50px; 
 // $font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
 // $font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
-// $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h4:            17px; 
 // $font-size-h5:            $font-size-base !default;
 // $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 
@@ -151,13 +168,13 @@ $font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
 
 // $btn-font-weight:                normal !default;
 
-// $btn-default-color:              #333 !default;
-// $btn-default-bg:                 #fff !default;
-// $btn-default-border:             #ccc !default;
+$btn-default-color:              #333 !default;
+$btn-default-bg:                 $light-gray;
+$btn-default-border:             $light-gray;
 
-// $btn-primary-color:              #fff !default;
-// $btn-primary-bg:                 $brand-primary !default;
-// $btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+$btn-primary-color:              #fff;
+$btn-primary-bg:                 $brand-primary;
+$btn-primary-border:             $brand-primary;
 
 // $btn-success-color:              #fff !default;
 // $btn-success-bg:                 $brand-success !default;
@@ -603,16 +620,16 @@ $navbar-height:                    50px !default;
 // $modal-title-line-height:     $line-height-base !default;
 
 // //** Background color of modal content area
-// $modal-content-bg:                             #fff !default;
+$modal-content-bg:                             $white;
 // //** Modal content border color
-// $modal-content-border-color:                   rgba(0,0,0,.2) !default;
+$modal-content-border-color:                   transparent;
 // //** Modal content border color **for IE8**
-// $modal-content-fallback-border-color:          #999 !default;
+$modal-content-fallback-border-color:          transparent;
 
 // //** Modal backdrop background color
-// $modal-backdrop-bg:           #000 !default;
+$modal-backdrop-bg:           $dark-gray;
 // //** Modal backdrop opacity
-// $modal-backdrop-opacity:      .5 !default;
+$modal-backdrop-opacity:      .3 !default;
 // //** Modal header border color
 // $modal-header-border-color:   #e5e5e5 !default;
 // //** Modal footer border color

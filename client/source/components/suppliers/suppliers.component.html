@@ -1,18 +1,20 @@
-<div class="app-container">
-    <div class="text-center">
-        <h1> Where your money goes </h1>
-        <h4> Payments made by Chichester District Council to individual suppliers with a value over £500 made within October </h4>
-        <hr>
+<div class="suppliers-container-wrapper">
+    <div class="suppliers-container">
+        <div class="text-center">
+            <h1 class="heading"> Where your money goes </h1>
+            <h4 class="subheading"> Payments made by Chichester District Council to individual suppliers with a value over £500 made within October </h4>
+            <hr>
+        </div>
+        <suppliers-filter-form 
+                filters-data="$ctrl.originFilters" 
+                on-filter-change="$ctrl.refreshSupplierData($event)"
+                on-filter-reset="$ctrl.resetFilters($event)">
+        </suppliers-filter-form>
+        <suppliers-list-container payments-data="$ctrl.suppliersData.payments"></suppliers-list-container>
+        <suppliers-pagination 
+                filters-data="$ctrl.filters" 
+                on-filter-change="$ctrl.refreshSupplierData($event)" 
+                pagination-data="$ctrl.suppliersData.pagination">
+        </suppliers-pagination>
     </div>
-    <suppliers-filter-form 
-            filters-data="$ctrl.originFilters" 
-            on-filter-change="$ctrl.refreshSupplierData($event)"
-            on-filter-reset="$ctrl.resetFilters($event)">
-    </suppliers-filter-form>
-    <suppliers-list-container payments-data="$ctrl.suppliersData.payments"></suppliers-list-container>
-    <suppliers-pagination 
-            filters-data="$ctrl.filters" 
-            on-filter-change="$ctrl.refreshSupplierData($event)" 
-            pagination-data="$ctrl.suppliersData.pagination">
-    </suppliers-pagination>
 </div>

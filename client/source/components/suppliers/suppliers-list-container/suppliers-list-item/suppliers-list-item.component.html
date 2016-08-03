@@ -1,6 +1,12 @@
 <div class="row" ng-click="$ctrl.openSupplierModalDetails()">
     <div class="col-sm-6"> {{$ctrl.supplier.payment_supplier}} </div>
-    <div class="col-sm-2"> {{$ctrl.supplier.payment_cost_rating}} </div> 
-    <div class="col-sm-2"> {{$ctrl.supplier.payment_ref}} </div> 
-    <div class="col-sm-2"> {{$ctrl.supplier.payment_amount}} </div>
+    <div class="col-sm-2 tex-center"> 
+        <pound-rating></pound-rating>
+        <div class="pound-rating">
+            <span class="pound"></span>
+            <span class="pound-checked"></span>
+        </div>
+    </div> 
+    <div class="col-sm-2 text-center"> {{$ctrl.supplier.payment_ref}} </div> 
+    <div class="col-sm-2 text-center"> {{$ctrl.supplier.payment_amount | currency: "£"}} </div>
 </div>

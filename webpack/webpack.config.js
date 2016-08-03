@@ -13,6 +13,7 @@ var webpackConfig = {
   },
   output: {
       path: config.path.dist.root,
+      publicPaht: '/',
       filename: config.file.js.out.filename,
       chunkFilename: config.file.js.out.chunkName,
   },

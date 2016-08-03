@@ -1,0 +1,19 @@
+
+.pound-rating {
+    .pound-icon {
+        background-image: url('../images/pound-rating.sprite.png');
+        display: inline-block;
+        height: 27px;
+        width: 26px;
+    }
+
+    .pound {
+        @extend .pound-icon;
+        background-position-x: 26px;
+    }
+
+    .pound-checked {
+        @extend .pound-icon;
+        background-position-x: 0px;
+    }
+}

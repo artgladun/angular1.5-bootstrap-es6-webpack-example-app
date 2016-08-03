@@ -1,0 +1,25 @@
+@import '_suppliers-filter-form.component';
+@import '_suppliers-list-container.component';
+@import '_suppliers-pagination.component';
+
+.suppliers-container-wrapper {
+    background: $lighter-gray;
+    border: 5px solid $lighter-gray;
+    border-radius: 7px;   
+}
+
+.suppliers-container {
+    background: $white;
+    border: 1px solid $light-gray;
+    border-radius: 5px;
+    padding: 10px 30px;
+
+    .heading {
+        @extend .source-sans-pro-italic;
+        color: $blue;
+    }
+
+    .subheading {
+        @extend .source-sans-pro-regular;
+    }
+}

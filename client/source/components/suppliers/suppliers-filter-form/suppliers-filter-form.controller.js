@@ -1,8 +1,13 @@
 
 class SuppliersFilterFormControllers {
-    constructor(EventEmmiter) {
+    constructor(EventEmmiter, CONFIG) {
         this.EventEmmiter = EventEmmiter
-        this.ratings = ['1', '2', '3', '4', '5']
+        this.CONFIG = CONFIG
+        this.ratings = []
+
+        for(let i=1; i<this.CONFIG.maxRating; i++) {
+            this.ratings.push(i)
+        }
     }
     $onChanges(changes) {
         if(changes.filtersData) {
@@ -17,6 +22,6 @@ class SuppliersFilterFormControllers {
     }
 }
 
-SuppliersFilterFormControllers.$inject = ['EventEmmiter']
+SuppliersFilterFormControllers.$inject = ['EventEmmiter', 'CONFIG']
 
 export default SuppliersFilterFormControllers

@@ -1,0 +1,17 @@
+.source-sans-pro-italic {
+    font-family: "Source Sans Pro";
+    font-weight: 300;
+}
+
+.source-sans-pro-regular {
+    font-family: "Source Sans Pro"; 
+    font-weight: 400;
+}
+
+hr {
+    color: $gray-light;
+}
+
+[ng-click] {
+    cursor: pointer; 
+}
