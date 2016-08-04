@@ -1,7 +1,12 @@
 
 class PoundRatingController {
     constructor(CONFIG) {
-        this.maxRating = this.CONFIG.maxRating
+        this.CONFIG = CONFIG
+        this.ratingsClasses = []
+
+        for(let i=0; i<this.CONFIG.maxRating; i++) {
+            this.ratingsClasses.push( i < this.rating ? 'pound-checked' : 'pound' )
+        }
     }
 }
 

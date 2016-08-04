@@ -23,4 +23,4 @@ const suppliers = angular.module('app.components.suppliers', [
 })
 .name
 
-export default suppliers
+export default suppliers 

@@ -1,7 +1,7 @@
 import angular from 'angular'
-import PoundRatingComponent from './pound-rating.component'
+import PoundRatingComponent from './pound-rating.component.js'
 
-const poundRating = angular.module('app.common.pound-rating', [])
+const poundRating = angular.module('app.components.pound-rating', [])
 .component('poundRating', PoundRatingComponent)
 .name 
 

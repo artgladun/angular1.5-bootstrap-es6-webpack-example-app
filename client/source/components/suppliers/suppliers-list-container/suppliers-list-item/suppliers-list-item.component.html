@@ -1,12 +1,16 @@
-<div class="row" ng-click="$ctrl.openSupplierModalDetails()">
-    <div class="col-sm-6"> {{$ctrl.supplier.payment_supplier}} </div>
-    <div class="col-sm-2 tex-center"> 
-        <pound-rating></pound-rating>
-        <div class="pound-rating">
-            <span class="pound"></span>
-            <span class="pound-checked"></span>
-        </div>
-    </div> 
-    <div class="col-sm-2 text-center"> {{$ctrl.supplier.payment_ref}} </div> 
-    <div class="col-sm-2 text-center"> {{$ctrl.supplier.payment_amount | currency: "£"}} </div>
+<div class="row suppliers-list-item" ng-click="$ctrl.openSupplierModalDetails()">
+    <div class="col col-xs-12 col-sm-4 col-md-5 col-lg-6 vcenter">
+        <span> {{$ctrl.supplier.payment_supplier}} </span> 
+    </div>
+    <div class="col col-xs-12 col-sm-4 col-md-3 col-lg-2 text-center-sm-up vcenter"> 
+        <pound-rating rating="$ctrl.supplier.payment_cost_rating"></pound-rating>
+    </div>
+    <div class="col col-xs-12 col-sm-2 text-center-sm-up vcenter"> 
+        <span class="left visible-xs"><b>Reference:</b>&nbsp; </span>        
+        <span>{{$ctrl.supplier.payment_ref}}</span> 
+    </div>
+    <div class="col col-xs-12 col-sm-2 text-center-sm-up vcenter"> 
+        <span class="left visible-xs"><b>Value:</b>&nbsp;</span>
+        <span>{{$ctrl.supplier.payment_amount | currency: "£"}}</span> 
+    </div>
 </div>

@@ -12,6 +12,7 @@ const root = angular.module('app', [
     ngAnimate,
     ngResource,
     uiRouter,
+    Common,
     Components,
     Resources
 ])

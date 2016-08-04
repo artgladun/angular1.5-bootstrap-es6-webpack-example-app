@@ -1,4 +1,3 @@
-<div class="pound-rating">>
-    <span class="pound"></span>
-    <span class="pound-checked"></span>
+<div class="pound-rating">
+    <span ng-repeat="poundClass in $ctrl.ratingsClasses track by $index" ng-class="poundClass"></span>
 </div>

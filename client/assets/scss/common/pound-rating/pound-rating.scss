@@ -1,10 +1,15 @@
 
 .pound-rating {
+    @extend .text-center-sm-up;
+    display: inline-block;
+    white-space: nowrap;
+    
     .pound-icon {
         background-image: url('../images/pound-rating.sprite.png');
         display: inline-block;
         height: 27px;
-        width: 26px;
+        margin: 0 1px;
+        width: 26px;        
     }
 
     .pound {

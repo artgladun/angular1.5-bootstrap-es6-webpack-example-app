@@ -1,0 +1,38 @@
+.suppliers-list-container {
+    border: 1px solid $lighter-gray;
+    border-radius: 3px;
+    margin-top: 20px;
+
+    .head {
+        background-color: $light-gray;
+        font-weight: bold;
+        padding: 15px 0;
+    }
+
+    .suppliers-list-item {
+        font-size: 0;
+        padding: 6px 0;
+
+        .col {
+            font-size: $font-size-base;
+        }
+
+        .pound-rating {
+            margin-top: 4px;
+        }
+    }
+
+    suppliers-list-item + suppliers-list-item {
+        .suppliers-list-item {
+            border-top: 1px solid $lighter-gray;
+        }        
+    }
+
+    suppliers-list-item:nth-child(2n) .suppliers-list-item {
+        background-color: darken($white, 3%);
+    }
+
+    .suppliers-list-item:hover {
+        background-color: darken($white, 2%);
+    }
+}

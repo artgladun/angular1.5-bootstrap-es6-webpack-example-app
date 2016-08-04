@@ -1,1 +1,9 @@
-<h1> {{$ctrl.supplier.payment_supplier}} </h1>
+
+<div class="modal-body">
+    <div class="suppliers-modal-details">
+        <h4> {{$ctrl.supplier.payment_supplier}} </h4>
+        <pound-rating rating="$ctrl.supplier.payment_cost_rating"></pound-rating>
+        <div><b>Reference: </b>{{$ctrl.supplier.payment_ref}}</div> 
+        <div><b>Value: </b>{{$ctrl.supplier.payment_amount | currency: "£"}}</div> 
+    </div>
+</div>
